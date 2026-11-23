@@ -6,6 +6,7 @@
 <meta name="theme-color" content="#100509">
 <title>Galatasaray Başkanlık Seçimi 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Rajdhani:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
 :root{
  --bg:#0d0509;--wine:#421020;--red:#dc1636;
@@ -208,6 +209,7 @@ main{max-width:1160px;margin:auto;padding:0 15px 60px}
 .interview-photo:after{
  content:"";position:absolute;inset:0;
  background:linear-gradient(0deg,#10050cf2,transparent 65%);
+ pointer-events:none;
 }
 .photo-fallback{
  position:absolute;inset:0;display:grid;place-items:center;
@@ -400,6 +402,7 @@ main{max-width:1160px;margin:auto;padding:0 15px 60px}
  background:linear-gradient(115deg,transparent 25%,#ffffff0a 50%,transparent 75%);
  transform:translateX(-100%);
  animation:shine 7s linear infinite;
+ pointer-events:none;
 }
 @keyframes shine{to{transform:translateX(100%)}}
 .result-hero b{
@@ -665,8 +668,10 @@ footer{
 }
 </style>
 </head>
+
 <body>
 <div class="topline"></div>
+
 <div class="ticker">
  <div class="ticker-track" id="tickerTrack"></div>
 </div>
@@ -680,7 +685,6 @@ footer{
   <small>BAŞKANLIK SEÇİMİ</small>
  </div>
  <div class="header-actions">
-  <button class="mini-btn" id="musicBtn">♫ MÜZİK</button>
   <button class="mini-btn" id="headerResults">SONUÇLAR</button>
  </div>
 </header>
@@ -710,7 +714,6 @@ footer{
 
 <main>
 
-<!-- GERİ SAYIM -->
 <section class="panel">
  <div class="countdown-wrap">
   <div class="tag">TARAFTAR SEÇİM KURULU</div>
@@ -718,18 +721,10 @@ footer{
    SANDIKLARIN KAPANMASINA KALAN SÜRE
   </h2>
   <div class="countdown">
-   <div class="timebox">
-    <b id="days">00</b><span>GÜN</span>
-   </div>
-   <div class="timebox">
-    <b id="hours">00</b><span>SAAT</span>
-   </div>
-   <div class="timebox">
-    <b id="minutes">00</b><span>DAKİKA</span>
-   </div>
-   <div class="timebox">
-    <b id="seconds">00</b><span>SANİYE</span>
-   </div>
+   <div class="timebox"><b id="days">00</b><span>GÜN</span></div>
+   <div class="timebox"><b id="hours">00</b><span>SAAT</span></div>
+   <div class="timebox"><b id="minutes">00</b><span>DAKİKA</span></div>
+   <div class="timebox"><b id="seconds">00</b><span>SANİYE</span></div>
   </div>
   <div class="deadline-note" id="deadlineNote">
    26 KASIM 2026 • 19:05 • TÜRKİYE SAATİ
@@ -737,7 +732,6 @@ footer{
  </div>
 </section>
 
-<!-- DUYURULAR -->
 <section class="panel">
  <div class="panel-head">
   <div>
@@ -752,7 +746,6 @@ footer{
  <div class="announcement-list" id="announcementList"></div>
 </section>
 
-<!-- RÖPORTAJ -->
 <section class="panel">
  <div class="panel-head">
   <div>
@@ -779,9 +772,7 @@ footer{
   <div class="interview-body">
    <div class="interview-top">
     <span class="broadcast-badge">SEÇİM RÖPORTAJI</span>
-    <span class="interview-counter" id="interviewCounter">
-     01 / 03
-    </span>
+    <span class="interview-counter" id="interviewCounter">01 / 06</span>
    </div>
    <h3 class="interview-name goldtext" id="interviewName">
     FATİH TERİM
@@ -792,9 +783,7 @@ footer{
     Kurgusal röportaj canlandırmasıdır. Gerçek konuşma
     veya doğrudan alıntı değildir.
    </div>
-   <div class="progress">
-    <div id="interviewProgress"></div>
-   </div>
+   <div class="progress"><div id="interviewProgress"></div></div>
    <div class="interview-controls">
     <button class="round" id="prevInterview">‹</button>
     <button class="round" id="nextInterview">›</button>
@@ -804,7 +793,6 @@ footer{
  </div>
 </section>
 
-<!-- OY PUSULASI -->
 <section class="panel" id="votePanel">
  <div class="tag">TARAFTAR OYLAMASI</div>
  <h2 class="heading">SEÇİM SANDIĞI</h2>
@@ -813,15 +801,9 @@ footer{
  </p>
 
  <div class="steps">
-  <div class="step active" id="step1">
-   <b>01</b>İLİNİ SEÇ
-  </div>
-  <div class="step" id="step2">
-   <b>02</b>MÜHÜRLE
-  </div>
-  <div class="step" id="step3">
-   <b>03</b>SANDIĞA AT
-  </div>
+  <div class="step active" id="step1"><b>01</b>İLİNİ SEÇ</div>
+  <div class="step" id="step2"><b>02</b>MÜHÜRLE</div>
+  <div class="step" id="step3"><b>03</b>SANDIĞA AT</div>
  </div>
 
  <div class="province-box" id="provinceBox">
@@ -886,7 +868,6 @@ footer{
  <div id="status" role="status"></div>
 </section>
 
-<!-- SONUÇLAR -->
 <section class="panel hidden" id="resultsPanel">
  <div class="panel-head">
   <div>
@@ -921,7 +902,6 @@ footer{
 
  <h2 class="heading">ADAYLARIN OY DAĞILIMI</h2>
  <div id="resultBars"></div>
-
  <div class="runoff" id="runoffBox"></div>
 
  <h2 class="heading">SEÇİMİN ÖNE ÇIKANLARI</h2>
@@ -938,6 +918,7 @@ footer{
   <span><i class="dot" style="background:#9b58c9"></i>Eşitlik</span>
   <span><i class="dot" style="background:#62616a"></i>Oy yok</span>
  </div>
+
  <div class="map" id="map">Harita yükleniyor...</div>
  <div class="province-detail" id="provinceDetail">
   Haritadan bir il seçerek oy dağılımını inceleyin.
@@ -964,7 +945,6 @@ footer{
  Bağımsız taraftar anketi • Resmî kulüp seçimi değildir.
 </footer>
 
-<!-- OY ANİMASYONU -->
 <div class="overlay hidden" id="voteOverlay">
  <div class="modal">
   <h2 id="stageTitle">OY PUSULASI HAZIRLANIYOR</h2>
@@ -978,7 +958,6 @@ footer{
  </div>
 </div>
 
-<!-- BAŞARILI OY -->
 <div class="overlay hidden" id="successOverlay">
  <div class="modal">
   <h2>OYUNUZ KAYDEDİLDİ</h2>
@@ -995,7 +974,6 @@ footer{
  </div>
 </div>
 
-<!-- PAYLAŞIM -->
 <div class="overlay hidden" id="shareOverlay">
  <div class="modal">
   <h2>SEÇİM KARTI</h2>
@@ -1010,7 +988,7 @@ footer{
  </div>
 </div>
 
-<audio id="musicPlayer" preload="none"></audio>
+<audio id="musicPlayer" preload="auto"></audio>
 
 <script type="module">
 import {initializeApp} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
@@ -1024,8 +1002,6 @@ import {
 
 /* ==================================================
    DÜZENLENEBİLİR AYARLAR
-   BURADAN DUYURU, RAPOR, RÖPORTAJ, FOTOĞRAF
-   VE MÜZİKLERİ DEĞİŞTİREBİLİRSİN.
 ================================================== */
 
 const SECIM_AYARLARI={
@@ -1101,12 +1077,6 @@ const SECIM_AYARLARI={
  ]
 };
 
-/*
-  NOT:
-  Yukarıdaki röportajlar ve mesajlar TEMSİLİDİR.
-  Adayların gerçek açıklamaları değildir.
-*/
-
 /* ADAY FOTOĞRAFLARI */
 const FOTOGRAFLAR={
  fatih:"https://r.resimlink.com/SYXuUhKJjOoI.jpg",
@@ -1114,11 +1084,15 @@ const FOTOGRAFLAR={
  erden:"https://r.resimlink.com/kLOpoYd.jpg"
 };
 
-/* ŞARKILARI BURAYA SIRAYLA EKLE */
+/* ==================================================
+   ŞARKILAR
+   BUTON YOK • OTOMATİK • SIRALI • DÖNGÜ
+================================================== */
+
 const SARKILAR=[
- // "https://www.mp3indirdur.info/mp3/indirdurArsiv333/Galatasaray/Marslari/Galatasaray-Marslari-Sen-Sariyla-Kirmizi.mp3",
- // "https://www.mp3indirdur.info/mp3/indirdurArsiv333/Galatasaray/Marslar-Muzikler/Galatasaray-Gonul-Verdik-Askina-Ugruna-Savas-Buna.mp3",
- // "https://www.mp3indirdur.info/mp3/indirdurArsiv333/Galatasaray/Marslari/Galatasaray-Marslari-4-Sene-Ust-Uste-Sampiyon-Olduk.mp3"
+ "https://www.mp3indirdur.info/mp3/indirdurArsiv333/Galatasaray/Marslari/Galatasaray-Marslari-Sen-Sariyla-Kirmizi.mp3",
+ "https://www.mp3indirdur.info/mp3/indirdurArsiv333/Galatasaray/Marslar-Muzikler/Galatasaray-Gonul-Verdik-Askina-Ugruna-Savas-Buna.mp3",
+ "https://www.mp3indirdur.info/mp3/indirdurArsiv333/Galatasaray/Marslari/Galatasaray-Marslari-4-Sene-Ust-Uste-Sampiyon-Olduk.mp3"
 ];
 
 /* FIREBASE */
@@ -1349,74 +1323,82 @@ if(SECIM_AYARLARI.roportajlar.length){
 }
 
 /* ==================================================
-   MÜZİK ÇALAR
+   OTOMATİK MÜZİK ÇALAR
+   BUTONSUZ • SIRALI • SÜREKLİ
 ================================================== */
 
 const audio=$("musicPlayer");
+
 let songIndex=0;
-let musicWanted=true;
-let musicErrors=0;
+let failedSongs=0;
 
-audio.volume=.35;
+audio.volume=0.35;
+audio.preload="auto";
 
-function musicLabel(){
- $("musicBtn").textContent=
-  !SARKILAR.length?"♫ MÜZİK":
-  audio.paused?"♫ AÇ":"♫ DURDUR";
+function prepareSong(){
+ if(!SARKILAR.length)return;
+
+ audio.src=SARKILAR[songIndex];
+ audio.load();
 }
 
 async function playMusic(){
- if(!SARKILAR.length||!musicWanted)return;
+ if(!SARKILAR.length)return;
+
  if(!audio.getAttribute("src")){
-  audio.src=SARKILAR[songIndex];
+  prepareSong();
  }
+
  try{
   await audio.play();
-  musicErrors=0;
- }catch(e){}
- musicLabel();
+ }catch(error){
+  // Tarayıcı sesli otomatik oynatmayı engelleyebilir.
+  // İlk kullanıcı etkileşiminde tekrar denenecek.
+ }
 }
 
 function nextSong(){
  if(!SARKILAR.length)return;
+
  songIndex=(songIndex+1)%SARKILAR.length;
- audio.src=SARKILAR[songIndex];
- if(musicWanted)playMusic();
+ prepareSong();
+ playMusic();
 }
 
-audio.onended=nextSong;
-audio.onerror=()=>{
- musicErrors++;
- if(musicErrors>=SARKILAR.length){
-  musicWanted=false;
-  audio.pause();
-  musicLabel();
-  return;
- }
+audio.addEventListener("ended",()=>{
+ failedSongs=0;
  nextSong();
-};
+});
 
-$("musicBtn").onclick=()=>{
- if(!SARKILAR.length){
-  $("musicBtn").textContent="♫ LİNK EKLE";
+audio.addEventListener("error",()=>{
+ failedSongs++;
+
+ if(failedSongs>=SARKILAR.length){
+  console.warn("Şarkı bağlantıları oynatılamadı.");
   return;
  }
- if(audio.paused){
-  musicWanted=true;
-  playMusic();
- }else{
-  musicWanted=false;
-  audio.pause();
-  musicLabel();
- }
-};
 
-document.addEventListener("pointerdown",()=>{
- if(musicWanted&&SARKILAR.length&&audio.paused)playMusic();
-},{once:true});
+ nextSong();
+});
 
+// Sayfa yüklenince otomatik başlat
 window.addEventListener("load",playMusic);
-musicLabel();
+
+// Tarayıcı izin vermezse ilk dokunuşta başlat
+document.addEventListener("pointerdown",()=>{
+ if(audio.paused)playMusic();
+});
+
+// TV kumandası ve klavye desteği
+document.addEventListener("keydown",()=>{
+ if(audio.paused)playMusic();
+});
+
+// İlk şarkıyı hazırla
+if(SARKILAR.length){
+ prepareSong();
+ playMusic();
+}
 
 /* ==================================================
    İL VE ADAY SEÇİMİ
@@ -2052,11 +2034,6 @@ function provinceDetail(il){
 /* ==================================================
    TÜRKİYE HARİTASI
 ================================================== */
-
-/*
-  Harita için turkey-provinces.geojson dosyasını
-  index.html ile aynı klasöre koyabilirsin.
-*/
 
 const MAP_URLS=[
  "./turkey-provinces.geojson",
