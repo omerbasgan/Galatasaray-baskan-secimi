@@ -1,0 +1,2413 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#100509">
+<title>Galatasaray Başkanlık Seçimi 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Rajdhani:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+ --bg:#0d0509;--wine:#421020;--red:#dc1636;
+ --red2:#8c0924;--gold:#ffd23e;--gold2:#ffeaa1;
+ --white:#fff7ed;--muted:#bca3af;--line:#c9a04a55;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;color:var(--white);
+ font-family:Montserrat,Arial,sans-serif;
+ background:
+ radial-gradient(ellipse at 10% 0%,#8a173b5c,transparent 43%),
+ radial-gradient(ellipse at 100% 40%,#81511a29,transparent 40%),
+ var(--bg);
+ overflow-x:hidden;
+}
+button,select{font:inherit}
+button{cursor:pointer}
+button:disabled{opacity:.5;cursor:not-allowed}
+.hidden{display:none!important}
+.goldtext{
+ background:linear-gradient(100deg,#c48a20,#fff0ad,#ffca30,#fff2bd,#bb7e20);
+ background-size:240% 100%;
+ -webkit-background-clip:text;background-clip:text;
+ color:transparent;animation:goldmove 8s linear infinite;
+}
+@keyframes goldmove{to{background-position:240% 0}}
+.topline{
+ height:5px;background:linear-gradient(90deg,var(--red) 50%,var(--gold) 50%);
+ box-shadow:0 0 25px #e7b03e66;
+}
+.ticker{
+ background:#300c1b;overflow:hidden;white-space:nowrap;
+ border-bottom:1px solid #d9ad4e55;padding:13px 0;
+}
+.ticker-track{
+ display:flex;width:max-content;gap:60px;
+ animation:tickerMove 70s linear infinite;
+}
+.ticker-track span{font-size:11px;font-weight:800}
+.ticker-track b{color:var(--gold)}
+@keyframes tickerMove{to{transform:translateX(-50%)}}
+.ticker-note{
+ background:#1a0912;text-align:center;color:#a98b9a;
+ padding:6px;font-size:9px;
+}
+header{
+ max-width:1180px;margin:auto;padding:17px;
+ display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.brand{font:900 25px Rajdhani}
+.brand small{
+ display:block;color:#c4a0ac;font:700 9px Montserrat;
+ letter-spacing:2px;
+}
+.header-actions{display:flex;gap:8px}
+.mini-btn{
+ border:1px solid #d7a74677;border-radius:10px;
+ background:#321322;color:white;padding:11px 13px;
+ font-size:10px;font-weight:900;
+}
+.hero{
+ text-align:center;padding:55px 15px 42px;
+ position:relative;overflow:hidden;
+}
+.hero:before{
+ content:"";position:absolute;left:15%;top:5%;
+ width:70%;height:70%;background:#b71c4150;
+ filter:blur(110px);pointer-events:none;
+}
+.hero>*{position:relative}
+.eyebrow{
+ color:var(--gold);font-size:10px;font-weight:900;
+ letter-spacing:4px;
+}
+h1{
+ font:900 clamp(43px,8vw,94px)/.94 Rajdhani;
+ margin:20px 0;letter-spacing:-1px;
+}
+.subtitle{font-size:12px;color:var(--muted);line-height:1.9}
+.live{
+ display:inline-flex;align-items:center;gap:8px;
+ background:#381324;border:1px solid #d9a54b80;
+ padding:9px 14px;border-radius:30px;
+ font-size:10px;font-weight:900;
+}
+.live-dot{
+ width:8px;height:8px;background:#ff3759;border-radius:50%;
+ box-shadow:0 0 12px #ff3759;animation:pulse 1.4s infinite;
+}
+@keyframes pulse{50%{opacity:.25}}
+.buttons{
+ display:flex;justify-content:center;gap:10px;
+ flex-wrap:wrap;margin-top:23px;
+}
+.btn{
+ border:0;border-radius:12px;padding:15px 21px;
+ font-size:11px;font-weight:900;transition:.2s;
+}
+.btn:active{transform:scale(.97)}
+.btn-gold{
+ background:linear-gradient(115deg,#fff0a5,#ffcb2f);
+ color:#271007;box-shadow:0 8px 30px #ffcb3040;
+}
+.btn-dark{
+ background:#451528;color:white;border:1px solid #d6a64a88;
+}
+main{max-width:1160px;margin:auto;padding:0 15px 60px}
+.panel{
+ background:linear-gradient(145deg,#2b1120f0,#130910f9);
+ border:1px solid var(--line);border-radius:23px;
+ padding:25px;margin-bottom:22px;
+ box-shadow:0 20px 55px #0007;
+}
+.panel-head{
+ display:flex;justify-content:space-between;
+ align-items:center;gap:12px;flex-wrap:wrap;
+}
+.tag{
+ font-size:9px;letter-spacing:2px;
+ font-weight:900;color:#e6bd71;
+}
+.heading{
+ font:900 clamp(25px,4vw,35px) Rajdhani;
+ color:var(--gold);margin:5px 0 10px;
+}
+.muted{
+ color:var(--muted);font-size:11px;
+ line-height:1.9;
+}
+.countdown-wrap{
+ background:linear-gradient(145deg,#441427,#1a0c15);
+ border:1px solid #e3b54f77;border-radius:20px;
+ padding:23px;text-align:center;
+}
+.countdown-title{
+ font:900 clamp(19px,3vw,30px) Rajdhani;
+ margin:10px 0 20px;
+}
+.countdown{
+ display:grid;grid-template-columns:repeat(4,1fr);
+ gap:11px;max-width:650px;margin:auto;
+}
+.timebox{
+ background:linear-gradient(145deg,#b81134,#650d24);
+ border:1px solid #f3c05266;border-radius:12px;
+ padding:12px 5px;box-shadow:inset 0 0 25px #0003;
+}
+.timebox b{
+ display:block;font:900 clamp(30px,6vw,58px) Rajdhani;
+ font-variant-numeric:tabular-nums;
+}
+.timebox span{
+ font-size:9px;font-weight:800;letter-spacing:1px;
+}
+.deadline-note{
+ color:#e9c788;font-size:10px;margin-top:17px;
+}
+.announcement-list{
+ display:grid;gap:12px;margin-top:17px;
+}
+.announcement{
+ background:#1a0e17;border:1px solid #d2a44d50;
+ border-radius:14px;overflow:hidden;
+}
+.announcement-head{
+ display:flex;align-items:center;gap:10px;
+ background:#100a12;padding:13px;
+}
+.board-badge{
+ background:#ad102c;border-radius:6px;padding:8px 11px;
+ font:900 12px Rajdhani;color:white;
+}
+.announcement-head strong{
+ font-size:11px;letter-spacing:.5px;
+}
+.announcement-body{
+ padding:17px;font-size:12px;line-height:2;color:#f1dfe7;
+ white-space:pre-line;
+}
+.announcement-date{
+ color:#cfae77;font-size:9px;font-weight:800;
+ margin-top:12px;
+}
+.broadcast{
+ display:grid;grid-template-columns:1fr 1.3fr;
+ gap:18px;margin-top:22px;
+}
+.interview-photo{
+ position:relative;min-height:350px;
+ background:linear-gradient(135deg,#63213a,#140b12);
+ border:1px solid #d8a84c70;
+ border-radius:17px;overflow:hidden;
+}
+.interview-photo img{
+ position:absolute;inset:0;width:100%;height:100%;
+ object-fit:cover;object-position:center 20%;
+}
+.interview-photo:after{
+ content:"";position:absolute;inset:0;
+ background:linear-gradient(0deg,#10050cf2,transparent 65%);
+}
+.photo-fallback{
+ position:absolute;inset:0;display:grid;place-items:center;
+ font:900 100px Rajdhani;color:#d8ad5466;
+}
+.photo-label{
+ position:absolute;z-index:2;bottom:20px;left:22px;
+ font:900 33px Rajdhani;text-shadow:0 3px 12px black;
+}
+.photo-label small{
+ display:block;font:800 10px Montserrat;
+ color:#ffe4a2;letter-spacing:2px;
+}
+.interview-body{
+ background:radial-gradient(circle at 100% 0%,#8b23404d,transparent 55%),#170c14;
+ border:1px solid #d4a74d55;border-radius:17px;
+ padding:25px;display:flex;flex-direction:column;
+ justify-content:center;
+}
+.interview-top{
+ display:flex;justify-content:space-between;
+ align-items:center;gap:8px;
+}
+.broadcast-badge{
+ background:#bb1536;border-radius:5px;
+ padding:8px 10px;font-size:9px;font-weight:900;
+}
+.interview-counter{
+ color:#e6c17b;font:900 18px Rajdhani;
+}
+.interview-name{
+ font:900 clamp(28px,4vw,45px) Rajdhani;
+ margin:21px 0 10px;
+}
+.interview-question{
+ color:var(--gold);font-size:12px;
+ font-weight:900;line-height:1.8;
+}
+.interview-answer{
+ font-size:clamp(13px,2vw,17px);
+ line-height:1.9;min-height:105px;
+ font-weight:600;
+}
+.disclaimer{
+ color:#aa8c9a;font-size:9px;line-height:1.8;
+}
+.progress{
+ height:4px;background:#ffffff20;
+ border-radius:10px;overflow:hidden;margin-top:18px;
+}
+.progress div{
+ height:100%;background:var(--gold);width:0;
+}
+.progress div.play{animation:progress 9s linear forwards}
+@keyframes progress{to{width:100%}}
+.interview-controls{
+ display:flex;align-items:center;gap:8px;margin-top:15px;
+}
+.round{
+ width:39px;height:39px;border-radius:50%;
+ border:1px solid #d8ab4b88;
+ background:#3b1729;color:#ffe5a4;font-size:18px;
+}
+.dots{display:flex;gap:7px;margin-left:auto}
+.dots span{
+ width:7px;height:7px;background:#684352;border-radius:50%;
+}
+.dots span.active{
+ width:22px;background:var(--gold);border-radius:9px;
+}
+.steps{
+ display:grid;grid-template-columns:repeat(3,1fr);
+ gap:9px;margin:22px 0;
+}
+.step{
+ text-align:center;background:#190d16;
+ border:1px solid #ffffff20;border-radius:12px;
+ padding:13px 5px;font-size:10px;
+ font-weight:800;color:#bca6b0;
+}
+.step b{
+ display:block;font:900 25px Rajdhani;color:var(--gold);
+}
+.step.active{
+ background:#4a192d;border-color:var(--gold);color:white;
+}
+.step.done{border-color:#b8a04a;color:#ffe6a0}
+.province-box{
+ max-width:650px;margin:25px auto;padding:21px;
+ background:#180c15;border:1px solid #d7aa4d77;
+ border-radius:15px;
+}
+.province-box.glow{animation:provinceGlow .8s}
+@keyframes provinceGlow{
+ 50%{box-shadow:0 0 42px #ffda4b70}
+}
+.province-box label{
+ display:block;font-size:11px;font-weight:900;margin-bottom:12px;
+}
+.province-box select{
+ width:100%;padding:17px;border-radius:10px;
+ background:#0d080d;color:white;
+ border:1px solid #cda34d88;outline:none;
+}
+.province-hint{
+ text-align:center;min-height:20px;
+ font-size:11px;font-weight:800;
+ color:var(--gold);margin-top:13px;
+}
+.paper{
+ background:#fffaf0;color:#241b1a;
+ border-radius:5px;max-width:930px;
+ margin:22px auto;padding:20px;
+ box-shadow:0 20px 55px #0008;
+}
+.paper-head{
+ text-align:center;border-bottom:2px solid #3b3030;
+ padding:15px 5px;
+}
+.paper-head strong{
+ font:900 clamp(19px,3vw,30px) Rajdhani;
+}
+.paper-head p{font-size:9px;letter-spacing:1px}
+.candidates{
+ display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:12px;margin:22px 0;
+}
+.candidate{
+ background:white;border:2px solid #d8cabb;
+ border-radius:8px;padding:10px;text-align:center;
+ cursor:pointer;position:relative;overflow:hidden;
+ transition:.2s;
+}
+.candidate:hover{transform:translateY(-3px)}
+.candidate.selected{
+ border-color:#d7193b;background:#fff7f5;
+ box-shadow:0 0 0 3px #d7193b20;
+}
+.portrait{
+ height:190px;background:linear-gradient(135deg,#d5c6b6,#9a8479);
+ border-radius:5px;overflow:hidden;position:relative;
+}
+.portrait img{
+ position:relative;z-index:1;width:100%;height:100%;
+ object-fit:cover;object-position:center 20%;
+}
+.initials{
+ position:absolute;inset:0;display:grid;place-items:center;
+ font:900 58px Rajdhani;color:#806c60;
+}
+.candidate strong{
+ display:block;font-size:12px;margin:13px 0 6px;
+}
+.candidate small{
+ font-size:9px;color:#756666;font-weight:800;
+}
+.stamp{
+ position:absolute;z-index:5;left:50%;top:36%;
+ width:95px;height:95px;margin:-47px 0 0 -47px;
+ border:7px double #d51a3b;border-radius:50%;
+ display:grid;place-items:center;color:#d51a3b;
+ font-size:25px;font-weight:900;opacity:0;
+ transform:rotate(-20deg) scale(3);pointer-events:none;
+}
+.candidate.selected .stamp{
+ animation:stamp .55s cubic-bezier(.1,1.4,.35,1) forwards;
+}
+@keyframes stamp{
+ 0%{opacity:0;transform:rotate(-20deg) scale(3)}
+ 65%{opacity:1;transform:rotate(-20deg) scale(.8)}
+ 100%{opacity:.95;transform:rotate(-20deg) scale(1)}
+}
+.paper-foot{
+ border-top:1px solid #cbbeb0;padding-top:13px;
+ text-align:center;font-size:10px;color:#756969;
+}
+#status{
+ text-align:center;min-height:22px;
+ color:var(--gold);font-size:12px;
+ margin-top:17px;line-height:1.8;
+}
+.result-hero{
+ background:linear-gradient(125deg,#54152d,#1b0b17);
+ border:1px solid #e0b24e80;border-radius:18px;
+ text-align:center;padding:25px;margin:20px 0;
+ position:relative;overflow:hidden;
+}
+.result-hero:before{
+ content:"";position:absolute;inset:0;
+ background:linear-gradient(115deg,transparent 25%,#ffffff0a 50%,transparent 75%);
+ transform:translateX(-100%);
+ animation:shine 7s linear infinite;
+}
+@keyframes shine{to{transform:translateX(100%)}}
+.result-hero b{
+ display:block;font:900 76px Rajdhani;color:var(--gold);
+}
+.result-hero span{
+ font-size:10px;font-weight:900;letter-spacing:2px;color:#e3c5d0;
+}
+.stats{
+ display:grid;grid-template-columns:repeat(3,1fr);
+ gap:10px;margin:18px 0 28px;
+}
+.stat{
+ background:#1d0e18;border:1px solid #ffffff20;
+ border-radius:13px;padding:19px 8px;text-align:center;
+}
+.stat b{
+ display:block;font:900 clamp(24px,4vw,40px) Rajdhani;
+ color:var(--gold);
+}
+.stat span{
+ font-size:9px;font-weight:800;color:#c9b0bb;
+}
+.result-row{
+ background:#1b0d17;border:1px solid #ffffff1c;
+ border-radius:14px;padding:15px;margin:12px 0;
+}
+.result-top{
+ display:flex;align-items:center;gap:12px;
+}
+.result-photo{
+ width:64px;height:64px;flex-shrink:0;
+ border-radius:10px;overflow:hidden;
+ background:#3a2430;position:relative;
+}
+.result-photo img{
+ width:100%;height:100%;object-fit:cover;position:relative;z-index:1;
+}
+.result-initials{
+ position:absolute;inset:0;display:grid;place-items:center;
+ font:900 26px Rajdhani;
+}
+.result-info{flex:1;min-width:0}
+.result-name{font-size:13px;font-weight:900}
+.result-meta{
+ color:#c8aeb9;font-size:10px;margin-top:6px;
+ line-height:1.6;
+}
+.result-pct{
+ font:900 clamp(25px,5vw,45px) Rajdhani;
+ white-space:nowrap;
+}
+.track{
+ height:13px;background:#ffffff15;
+ border-radius:20px;overflow:hidden;margin-top:13px;
+}
+.fill{
+ height:100%;width:0;border-radius:20px;
+ transition:width 1s ease;
+}
+.leader-badge{
+ display:inline-block;margin-left:7px;
+ background:#693115;color:#ffdb85;
+ padding:4px 7px;border-radius:5px;
+ font-size:9px;font-weight:900;
+}
+.runoff{
+ border:1px dashed #d8a04f80;border-radius:15px;
+ padding:17px;background:#21101a;
+ font-size:12px;line-height:1.9;margin:20px 0;
+}
+.runoff b{color:var(--gold)}
+.insights{
+ display:grid;grid-template-columns:repeat(2,1fr);
+ gap:11px;margin:20px 0 30px;
+}
+.insight{
+ background:#1b0d17;border:1px solid #ffffff20;
+ border-radius:14px;padding:18px;
+}
+.insight small{
+ color:#d3b8c2;font-size:10px;font-weight:900;
+ letter-spacing:1px;
+}
+.insight strong{
+ display:block;font:900 clamp(21px,4vw,34px) Rajdhani;
+ margin:9px 0 4px;color:var(--gold);
+}
+.insight p{
+ font-size:10px;color:#c7aeb9;margin:0;line-height:1.7;
+}
+.leaders{
+ display:grid;grid-template-columns:repeat(3,1fr);
+ gap:10px;margin:18px 0 30px;
+}
+.leader{
+ background:#1c0e17;border:1px solid #ffffff20;
+ border-radius:14px;padding:15px 7px;text-align:center;
+}
+.leader .count{font:900 44px Rajdhani}
+.leader .name{font-size:11px;font-weight:900}
+.leader .cities{
+ color:#c8aebb;font-size:10px;
+ line-height:1.8;margin-top:9px;
+}
+.legend{
+ display:flex;flex-wrap:wrap;gap:12px;
+ margin:18px 0;font-size:10px;
+}
+.legend span{display:flex;align-items:center;gap:6px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.map{
+ background:#0d0b12;border:1px solid #ffffff22;
+ border-radius:15px;padding:14px;min-height:160px;
+}
+.map svg{width:100%;height:auto;display:block}
+.map path{
+ stroke:#493c43;stroke-width:.65;
+ cursor:pointer;transition:.2s;
+}
+.map path:hover{
+ stroke:white;stroke-width:1.6;opacity:.8;
+}
+.province-detail{
+ background:#291420;border:1px solid #d9a94b70;
+ border-radius:12px;padding:17px;margin-top:15px;
+ font-size:12px;line-height:2;
+}
+.overlay{
+ position:fixed;inset:0;z-index:100;
+ background:#060307f2;backdrop-filter:blur(15px);
+ display:grid;place-items:center;padding:15px;
+}
+.modal{
+ width:min(100%,490px);
+ background:linear-gradient(145deg,#4c1b30,#160910);
+ border:1px solid #e3b74d99;border-radius:23px;
+ padding:25px 18px;text-align:center;
+ box-shadow:0 0 85px #d5a12c35;overflow:hidden;
+}
+.modal h2{
+ font:900 31px Rajdhani;color:var(--gold);margin:12px 0;
+}
+.modal p{font-size:12px;line-height:1.8}
+.scene{
+ height:310px;position:relative;
+ overflow:hidden;isolation:isolate;
+}
+.scene-paper{
+ position:absolute;top:12px;left:50%;margin-left:-75px;
+ width:150px;height:115px;background:#fffaf0;color:#3c2b2b;
+ border:3px solid #d1c09e;display:grid;place-items:center;
+ font:900 18px Rajdhani;z-index:5;
+}
+.scene-stamp{
+ position:absolute;top:22px;left:50%;margin-left:-47px;
+ width:94px;height:94px;border:7px double #d81c3c;
+ border-radius:50%;display:grid;place-items:center;
+ color:#d81c3c;font-size:25px;font-weight:900;
+ opacity:0;transform:rotate(-20deg) scale(3);z-index:7;
+}
+.scene-envelope{
+ position:absolute;top:35px;left:50%;margin-left:-69px;
+ width:138px;height:94px;border-radius:6px;opacity:0;
+ z-index:6;box-shadow:0 10px 25px #0008;
+}
+.scene-envelope:before{
+ content:"";position:absolute;inset:0;background:#00000020;
+ clip-path:polygon(0 0,50% 60%,100% 0);
+}
+.scene-box{
+ position:absolute;bottom:12px;left:50%;margin-left:-112px;
+ width:224px;height:118px;border:3px solid #e7bb58;
+ border-radius:10px;background:linear-gradient(145deg,#8a2945,#351021);
+ box-shadow:inset 0 0 30px #0008;z-index:3;
+}
+.scene-box:before{
+ content:"";position:absolute;top:-9px;left:50%;
+ margin-left:-72px;width:144px;height:10px;
+ background:#080408;border:2px solid #e7bb58;border-radius:9px;
+}
+.scene-box:after{
+ content:"SANDIK";position:absolute;top:52px;left:0;right:0;
+ font:900 25px Rajdhani;color:#ffd54c99;letter-spacing:4px;
+}
+.scene.phase-stamp .scene-stamp{
+ animation:sceneStamp .75s both;
+}
+@keyframes sceneStamp{
+ 0%{opacity:0;transform:rotate(-20deg) scale(3)}
+ 60%{opacity:1;transform:rotate(-20deg) scale(.8)}
+ 100%{opacity:.95;transform:rotate(-20deg) scale(1)}
+}
+.scene.phase-fold .scene-paper{animation:foldPaper .85s both}
+.scene.phase-fold .scene-stamp{animation:foldStamp .85s both}
+@keyframes foldPaper{
+ from{transform:scaleY(1);opacity:1}
+ 70%{transform:scaleY(.15);opacity:1}
+ to{transform:scale(.65,.08);opacity:0}
+}
+@keyframes foldStamp{
+ to{opacity:0;transform:rotate(-20deg) scale(.2)}
+}
+.scene.phase-drop .scene-envelope{
+ animation:dropEnvelope 2s ease-in-out both;
+}
+@keyframes dropEnvelope{
+ 0%{opacity:0;transform:translateY(-45px) scale(.55) rotate(-12deg)}
+ 18%{opacity:1;transform:translateY(0) scale(1)}
+ 42%{opacity:1;transform:translateY(35px) rotate(8deg)}
+ 72%{opacity:1;transform:translateY(140px) scale(.8)}
+ 100%{opacity:0;transform:translateY(225px) scale(.15)}
+}
+.scene.phase-drop .scene-box{
+ animation:boxPulse 2s both;
+}
+@keyframes boxPulse{
+ 0%,70%,100%{box-shadow:inset 0 0 30px #0008}
+ 84%{box-shadow:0 0 45px #ffd54c99,inset 0 0 30px #0008}
+}
+.member{
+ font:900 54px Rajdhani;color:var(--gold);
+}
+.share-preview{
+ width:100%;max-height:52vh;object-fit:contain;
+ border:1px solid #d5a84b66;border-radius:12px;
+ margin:12px 0;
+}
+footer{
+ text-align:center;color:#a88e9b;
+ font-size:10px;line-height:2;padding:20px;
+}
+@media(max-width:700px){
+ header{padding:14px}.brand{font-size:20px}
+ .hero{padding:35px 12px}
+ .panel{padding:15px}
+ .broadcast{grid-template-columns:1fr;gap:12px}
+ .interview-photo{min-height:265px}
+ .interview-body{padding:19px}
+ .paper{padding:11px}.candidates{gap:6px}
+ .candidate{padding:7px 4px}
+ .portrait{height:112px}
+ .candidate strong{font-size:10px}
+ .candidate small{font-size:8px}
+ .stamp{
+  width:58px;height:58px;margin:-29px 0 0 -29px;
+  font-size:16px;border-width:4px;
+ }
+ .leaders,.stats{gap:6px}
+ .leader,.stat{padding:11px 5px}
+ .leader .count{font-size:30px}
+ .leader .name,.stat span{font-size:9px}
+ .leader .cities{font-size:9px}
+ .buttons{flex-direction:column}
+ .buttons .btn{width:100%}
+ .result-photo{width:55px;height:55px}
+ .result-name{font-size:11px}
+ .result-meta{font-size:9px}
+ .insight{padding:13px}
+ .countdown{gap:6px}
+ .timebox{padding:10px 3px}
+ .timebox span{font-size:8px}
+}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<div class="ticker">
+ <div class="ticker-track" id="tickerTrack"></div>
+</div>
+<div class="ticker-note">
+ Temsili seçim mesajları • Gerçek aday açıklaması değildir
+</div>
+
+<header>
+ <div class="brand goldtext">
+  GALATASARAY 2026
+  <small>BAŞKANLIK SEÇİMİ</small>
+ </div>
+ <div class="header-actions">
+  <button class="mini-btn" id="musicBtn">♫ MÜZİK</button>
+  <button class="mini-btn" id="headerResults">SONUÇLAR</button>
+ </div>
+</header>
+
+<section class="hero">
+ <div class="live">
+  <i class="live-dot"></i>
+  <span id="heroLive">TARAFTAR SEÇİMİ DEVAM EDİYOR</span>
+ </div>
+ <div class="eyebrow" style="margin-top:23px">
+  TARAFTARIN SÖZÜ
+ </div>
+ <h1 class="goldtext">
+  GALATASARAY<br>
+  BAŞKANLIK SEÇİMİ<br>
+  2026
+ </h1>
+ <p class="subtitle">
+  Bir tercih. Bir mühür. Bir sandık.<br>
+  Galatasaray taraftarının seçimi.
+ </p>
+ <div class="buttons">
+  <button class="btn btn-gold" id="heroVote">OY KULLAN</button>
+  <button class="btn btn-dark" id="heroResults">CANLI SONUÇLAR</button>
+ </div>
+</section>
+
+<main>
+
+<!-- GERİ SAYIM -->
+<section class="panel">
+ <div class="countdown-wrap">
+  <div class="tag">TARAFTAR SEÇİM KURULU</div>
+  <h2 class="countdown-title">
+   SANDIKLARIN KAPANMASINA KALAN SÜRE
+  </h2>
+  <div class="countdown">
+   <div class="timebox">
+    <b id="days">00</b><span>GÜN</span>
+   </div>
+   <div class="timebox">
+    <b id="hours">00</b><span>SAAT</span>
+   </div>
+   <div class="timebox">
+    <b id="minutes">00</b><span>DAKİKA</span>
+   </div>
+   <div class="timebox">
+    <b id="seconds">00</b><span>SANİYE</span>
+   </div>
+  </div>
+  <div class="deadline-note" id="deadlineNote">
+   26 KASIM 2026 • 19:05 • TÜRKİYE SAATİ
+  </div>
+ </div>
+</section>
+
+<!-- DUYURULAR -->
+<section class="panel">
+ <div class="panel-head">
+  <div>
+   <div class="tag">SEÇİM BÜLTENİ</div>
+   <h2 class="heading">DUYURULAR VE RAPORLAR</h2>
+  </div>
+  <span class="live">SEÇİM KURULU</span>
+ </div>
+ <p class="muted">
+  Seçimle ilgili duyurular, bilgilendirmeler ve raporlar.
+ </p>
+ <div class="announcement-list" id="announcementList"></div>
+</section>
+
+<!-- RÖPORTAJ -->
+<section class="panel">
+ <div class="panel-head">
+  <div>
+   <div class="tag">SEÇİM ÖZEL YAYINI</div>
+   <h2 class="heading">BAŞKAN ADAYLARI • RÖPORTAJ</h2>
+  </div>
+  <div class="live">
+   <i class="live-dot"></i>
+   OTOMATİK YAYIN AKIŞI
+  </div>
+ </div>
+ <p class="muted">
+  Adaylar için hazırlanmış temsili seçim röportajları.
+ </p>
+ <div class="broadcast">
+  <div class="interview-photo">
+   <div class="photo-fallback" id="interviewInitials">FT</div>
+   <img id="interviewImage" alt="Aday fotoğrafı">
+   <div class="photo-label">
+    <span id="interviewPhotoName">FATİH TERİM</span>
+    <small>BAŞKAN ADAYI</small>
+   </div>
+  </div>
+  <div class="interview-body">
+   <div class="interview-top">
+    <span class="broadcast-badge">SEÇİM RÖPORTAJI</span>
+    <span class="interview-counter" id="interviewCounter">
+     01 / 03
+    </span>
+   </div>
+   <h3 class="interview-name goldtext" id="interviewName">
+    FATİH TERİM
+   </h3>
+   <div class="interview-question" id="interviewQuestion"></div>
+   <p class="interview-answer" id="interviewAnswer"></p>
+   <div class="disclaimer">
+    Kurgusal röportaj canlandırmasıdır. Gerçek konuşma
+    veya doğrudan alıntı değildir.
+   </div>
+   <div class="progress">
+    <div id="interviewProgress"></div>
+   </div>
+   <div class="interview-controls">
+    <button class="round" id="prevInterview">‹</button>
+    <button class="round" id="nextInterview">›</button>
+    <div class="dots" id="interviewDots"></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- OY PUSULASI -->
+<section class="panel" id="votePanel">
+ <div class="tag">TARAFTAR OYLAMASI</div>
+ <h2 class="heading">SEÇİM SANDIĞI</h2>
+ <p class="muted">
+  İlinizi seçin, adayınızı mühürleyin ve zarfınızı sandığa atın.
+ </p>
+
+ <div class="steps">
+  <div class="step active" id="step1">
+   <b>01</b>İLİNİ SEÇ
+  </div>
+  <div class="step" id="step2">
+   <b>02</b>MÜHÜRLE
+  </div>
+  <div class="step" id="step3">
+   <b>03</b>SANDIĞA AT
+  </div>
+ </div>
+
+ <div class="province-box" id="provinceBox">
+  <label for="province">OY KULLANACAĞINIZ İL</label>
+  <select id="province">
+   <option value="">81 il arasından seçim yapın</option>
+  </select>
+  <div class="province-hint" id="provinceHint">
+   Önce ilinizi seçin.
+  </div>
+ </div>
+
+ <div class="paper">
+  <div class="paper-head">
+   <strong>GALATASARAY BAŞKANLIK SEÇİMİ 2026</strong>
+   <p>BAĞIMSIZ TARAFTAR ANKETİ • OY PUSULASI</p>
+  </div>
+  <div class="candidates">
+   <div class="candidate" data-id="fatih" tabindex="0" role="button">
+    <div class="portrait">
+     <div class="initials">FT</div>
+     <img id="photoFatih" alt="Fatih Terim">
+    </div>
+    <strong>FATİH TERİM</strong>
+    <small>SARI ZARF</small>
+    <div class="stamp">EVET</div>
+   </div>
+
+   <div class="candidate" data-id="dursun" tabindex="0" role="button">
+    <div class="portrait">
+     <div class="initials">DÖ</div>
+     <img id="photoDursun" alt="Dursun Özbek">
+    </div>
+    <strong>DURSUN ÖZBEK</strong>
+    <small>BEYAZ ZARF</small>
+    <div class="stamp">EVET</div>
+   </div>
+
+   <div class="candidate" data-id="erden" tabindex="0" role="button">
+    <div class="portrait">
+     <div class="initials">ET</div>
+     <img id="photoErden" alt="Erden Timur">
+    </div>
+    <strong>ERDEN TİMUR</strong>
+    <small>KIRMIZI ZARF</small>
+    <div class="stamp">EVET</div>
+   </div>
+  </div>
+  <div class="paper-foot">
+   Adayınıza dokunarak kırmızı EVET mührünü basın.
+  </div>
+ </div>
+
+ <div class="buttons">
+  <button class="btn btn-gold" id="voteBtn">
+   ZARFI SANDIĞA AT
+  </button>
+  <button class="btn btn-dark" id="resultsBtn">
+   SONUÇLARI GÖR
+  </button>
+ </div>
+ <div id="status" role="status"></div>
+</section>
+
+<!-- SONUÇLAR -->
+<section class="panel hidden" id="resultsPanel">
+ <div class="panel-head">
+  <div>
+   <div class="tag">SEÇİM GECESİ • SONUÇ MERKEZİ</div>
+   <h2 class="heading">CANLI SONUÇLAR</h2>
+  </div>
+  <button class="btn btn-dark" id="backBtn">
+   OY PUSULASINA DÖN
+  </button>
+ </div>
+
+ <div class="result-hero">
+  <span>TOPLAM KULLANILAN OY</span>
+  <b id="totalVotes">0</b>
+  <span id="openedCities">0 / 81 İLDE OY KULLANILDI</span>
+ </div>
+
+ <div class="stats">
+  <div class="stat">
+   <b id="statLeader">—</b>
+   <span>OY SIRALAMASINDA ÖNDE</span>
+  </div>
+  <div class="stat">
+   <b id="statCities">0</b>
+   <span>OY GELEN İL</span>
+  </div>
+  <div class="stat">
+   <b id="statMargin">0</b>
+   <span>İLK İKİ ARASI OY FARKI</span>
+  </div>
+ </div>
+
+ <h2 class="heading">ADAYLARIN OY DAĞILIMI</h2>
+ <div id="resultBars"></div>
+
+ <div class="runoff" id="runoffBox"></div>
+
+ <h2 class="heading">SEÇİMİN ÖNE ÇIKANLARI</h2>
+ <div class="insights" id="insights"></div>
+
+ <h2 class="heading">İLLERDE ÜSTÜNLÜK</h2>
+ <div class="leaders" id="leaderCards"></div>
+
+ <h2 class="heading">TÜRKİYE SEÇİM HARİTASI</h2>
+ <div class="legend">
+  <span><i class="dot" style="background:#ffd52e"></i>Fatih Terim</span>
+  <span><i class="dot" style="background:#f3f3f3"></i>Dursun Özbek</span>
+  <span><i class="dot" style="background:#d7193c"></i>Erden Timur</span>
+  <span><i class="dot" style="background:#9b58c9"></i>Eşitlik</span>
+  <span><i class="dot" style="background:#62616a"></i>Oy yok</span>
+ </div>
+ <div class="map" id="map">Harita yükleniyor...</div>
+ <div class="province-detail" id="provinceDetail">
+  Haritadan bir il seçerek oy dağılımını inceleyin.
+ </div>
+
+ <div class="buttons">
+  <button class="btn btn-gold" id="shareBtn">
+   VIP SEÇİM KARTINI PAYLAŞ
+  </button>
+  <button class="btn btn-dark" id="refreshBtn">
+   SONUÇLARI YENİLE
+  </button>
+ </div>
+ <p class="muted" style="text-align:center">
+  Sonuçlar Firebase verilerinden hesaplanır.
+  Bu anket resmî kulüp seçimi değildir.
+ </p>
+</section>
+
+</main>
+
+<footer>
+ GALATASARAY BAŞKANLIK SEÇİMİ 2026<br>
+ Bağımsız taraftar anketi • Resmî kulüp seçimi değildir.
+</footer>
+
+<!-- OY ANİMASYONU -->
+<div class="overlay hidden" id="voteOverlay">
+ <div class="modal">
+  <h2 id="stageTitle">OY PUSULASI HAZIRLANIYOR</h2>
+  <div class="scene" id="scene">
+   <div class="scene-paper">OY PUSULASI</div>
+   <div class="scene-stamp">EVET</div>
+   <div class="scene-envelope" id="sceneEnvelope"></div>
+   <div class="scene-box"></div>
+  </div>
+  <p id="stageText">Lütfen bekleyin...</p>
+ </div>
+</div>
+
+<!-- BAŞARILI OY -->
+<div class="overlay hidden" id="successOverlay">
+ <div class="modal">
+  <h2>OYUNUZ KAYDEDİLDİ</h2>
+  <p>Oyunuz sandığa başarıyla kaydedildi.</p>
+  <p class="muted">TARAFTAR KATILIM NUMARANIZ</p>
+  <div class="member" id="memberNumber"></div>
+  <button class="btn btn-gold" id="successResults" style="width:100%">
+   SONUÇLARI GÖR
+  </button>
+  <button class="btn btn-dark" id="successClose"
+   style="width:100%;margin-top:10px">
+   KAPAT
+  </button>
+ </div>
+</div>
+
+<!-- PAYLAŞIM -->
+<div class="overlay hidden" id="shareOverlay">
+ <div class="modal">
+  <h2>VIP SEÇİM KARTI</h2>
+  <img id="sharePreview" class="share-preview"
+   alt="Seçim paylaşım görseli">
+  <div class="buttons">
+   <button class="btn btn-gold" id="shareImageBtn">PAYLAŞ</button>
+   <button class="btn btn-dark" id="downloadImageBtn">PNG KAYDET</button>
+   <button class="btn btn-dark" id="closeShareBtn">KAPAT</button>
+  </div>
+  <p class="muted" id="shareStatus"></p>
+ </div>
+</div>
+
+<audio id="musicPlayer" preload="none"></audio>
+
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+import {
+ getAuth,signInAnonymously,onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+import {
+ getFirestore,doc,collection,getDoc,getDocs,
+ runTransaction,serverTimestamp
+} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+
+/* ==================================================
+   DÜZENLENEBİLİR AYARLAR
+   BURADAN DUYURU, RAPOR, RÖPORTAJ, FOTOĞRAF
+   VE MÜZİKLERİ DEĞİŞTİREBİLİRSİN.
+================================================== */
+
+const SECIM_AYARLARI={
+ bitisTarihi:"2026-11-26T19:05:00+03:00",
+
+ duyurular:[
+  {
+   baslik:"Seçim Kurulu Duyurusu",
+   tarih:"23.11.2026",
+   metin:"Galatasaray taraftar seçiminde oy verme işlemleri 26 Kasım 2026 saat 19.05'e kadar devam edecektir.",
+   aktif:true
+  },
+  {
+   baslik:"Taraftar Katılım Bilgilendirmesi",
+   tarih:"23.11.2026",
+   metin:"Her katılımcı kendi ilini seçerek tercih ettiği başkan adayına oy verebilir. Oy işleminin ardından taraftar katılım numarası oluşturulur.",
+   aktif:true
+  }
+ ],
+
+ raporlar:[
+  {
+   baslik:"Seçim Durum Raporu",
+   tarih:"23.11.2026",
+   metin:"Taraftar anketinde oy kullanma işlemleri devam etmektedir. Adayların oy dağılımları ve illerdeki durum sonuç ekranından takip edilebilir.",
+   aktif:true
+  }
+ ],
+
+ mesajlar:[
+  ["Fatih Terim","Galatasaray için güçlü bir birliktelik ve büyük hedefler."],
+  ["Erden Timur","Geleceği planlayan, sürdürülebilir başarıya odaklanan bir vizyon."],
+  ["Dursun Özbek","İstikrar, mali disiplin ve sportif başarı."],
+  ["Fatih Terim","Taraftarın gücüyle yeni başarılar hedefi."],
+  ["Erden Timur","Gençlere fırsat, geleceğe yatırım."],
+  ["Dursun Özbek","Birlikte daha güçlü bir Galatasaray."],
+  ["Fatih Terim","Galatasaray ruhu, mücadele ve birlik."],
+  ["Erden Timur","Uzun vadeli başarı için güçlü projeler."],
+  ["Dursun Özbek","Kulüp için ortak hedefler ve kararlı yönetim."]
+ ],
+
+ roportajlar:[
+  {
+   aday:"fatih",
+   soru:"Galatasaray taraftarına seçim mesajınız ne olurdu?",
+   cevap:"Galatasaray'ın en büyük gücü taraftarıdır. Birlik, mücadele ve yüksek hedefler etrafında buluşan bir camianın önünde hiçbir engel duramaz."
+  },
+  {
+   aday:"erden",
+   soru:"Başkanlık yarışında hangi projelere öncelik verirdiniz?",
+   cevap:"Kulübün geleceğini güçlendirecek, genç yeteneklere alan açacak ve ekonomik sürdürülebilirliği sağlayacak uzun vadeli projeler öncelikli olurdu."
+  },
+  {
+   aday:"dursun",
+   soru:"Taraftarın güvenini kazanmak için hangi yaklaşımı benimserdiniz?",
+   cevap:"Sportif başarıyı, mali disiplini ve kurumsal istikrarı birlikte ele alan bir yönetim anlayışını öne çıkarırdık."
+  },
+  {
+   aday:"fatih",
+   soru:"Seçimin en önemli konusu sizce ne olurdu?",
+   cevap:"Galatasaray'ın değerlerini korurken hedefleri büyütmek, camiayı aynı amaç etrafında birleştirmek ve başarı kültürünü sürdürmek."
+  },
+  {
+   aday:"erden",
+   soru:"Gelecek nesillere nasıl bir Galatasaray bırakmak isterdiniz?",
+   cevap:"Güçlü altyapısı, sürdürülebilir ekonomisi ve uluslararası hedefleri olan, geleceğe güvenle bakan bir Galatasaray."
+  },
+  {
+   aday:"dursun",
+   soru:"Seçim sonrasında ilk hedefiniz ne olurdu?",
+   cevap:"Camianın bütünlüğünü korumak, devam eden projeleri değerlendirmek ve sportif başarı için kararlı biçimde çalışmak."
+  }
+ ]
+};
+
+/*
+  NOT:
+  Yukarıdaki röportajlar ve mesajlar TEMSİLİDİR.
+  Adayların gerçek açıklamaları değildir.
+*/
+
+/* ADAY FOTOĞRAFLARI */
+const FOTOGRAFLAR={
+ fatih:"./fatih.jpg",
+ dursun:"./dursun.jpg",
+ erden:"./erden.jpg"
+};
+
+/* ŞARKILARI BURAYA SIRAYLA EKLE */
+const SARKILAR=[
+ // "https://site.com/sarki1.mp3",
+ // "https://site.com/sarki2.mp3",
+ // "https://site.com/sarki3.mp3"
+];
+
+/* FIREBASE */
+const firebaseConfig={
+ apiKey:"AIzaSyC59qq7JGlnih47iWIxKm8csYnoE2mSFo8",
+ authDomain:"gshd-d7843.firebaseapp.com",
+ projectId:"gshd-d7843",
+ storageBucket:"gshd-d7843.firebasestorage.app",
+ messagingSenderId:"458559276692",
+ appId:"1:458559276692:web:e3c5b17920180f8cf65681",
+ measurementId:"G-1XZ4KLTLB0"
+};
+
+/* ==================================================
+   UYGULAMA
+================================================== */
+
+const $=id=>document.getElementById(id);
+const app=initializeApp(firebaseConfig);
+const auth=getAuth(app);
+const db=getFirestore(app);
+
+const ADAYLAR={
+ fatih:{name:"Fatih Terim",color:"#ffd52e",initials:"FT"},
+ dursun:{name:"Dursun Özbek",color:"#f3f3f3",initials:"DÖ"},
+ erden:{name:"Erden Timur",color:"#d7193c",initials:"ET"}
+};
+
+const ILLER=[
+"Adana","Adıyaman","Afyonkarahisar","Ağrı","Amasya",
+"Ankara","Antalya","Artvin","Aydın","Balıkesir",
+"Bilecik","Bingöl","Bitlis","Bolu","Burdur",
+"Bursa","Çanakkale","Çankırı","Çorum","Denizli",
+"Diyarbakır","Edirne","Elazığ","Erzincan","Erzurum",
+"Eskişehir","Gaziantep","Giresun","Gümüşhane","Hakkari",
+"Hatay","Isparta","Mersin","İstanbul","İzmir",
+"Kars","Kastamonu","Kayseri","Kırklareli","Kırşehir",
+"Kocaeli","Konya","Kütahya","Malatya","Manisa",
+"Kahramanmaraş","Mardin","Muğla","Muş","Nevşehir",
+"Niğde","Ordu","Rize","Sakarya","Samsun",
+"Siirt","Sinop","Sivas","Tekirdağ","Tokat",
+"Trabzon","Tunceli","Şanlıurfa","Uşak","Van",
+"Yozgat","Zonguldak","Aksaray","Bayburt","Karaman",
+"Kırıkkale","Batman","Şırnak","Bartın","Ardahan",
+"Iğdır","Yalova","Karabük","Kilis","Osmaniye","Düzce"
+];
+
+let user=null;
+let selectedCandidate=null;
+let voting=false;
+let existingVote=null;
+let results=null;
+let mapFeatures=null;
+let shareBlob=null;
+let shareUrl=null;
+
+const deadline=new Date(SECIM_AYARLARI.bitisTarihi);
+
+function show(id){$(id).classList.remove("hidden")}
+function hide(id){$(id).classList.add("hidden")}
+function status(t){$("status").textContent=t}
+function numberFormat(n){
+ return "1905-"+String(n).padStart(4,"0");
+}
+function isClosed(){return Date.now()>=deadline.getTime()}
+function pct(n,total){
+ return total?(n/total*100).toFixed(1):"0.0";
+}
+function sleep(ms){
+ return new Promise(resolve=>setTimeout(resolve,ms));
+}
+
+/* ==================================================
+   GERİ SAYIM
+================================================== */
+
+function updateCountdown(){
+ const diff=Math.max(0,deadline.getTime()-Date.now());
+ const total=Math.floor(diff/1000);
+
+ $("days").textContent=String(Math.floor(total/86400)).padStart(2,"0");
+ $("hours").textContent=String(Math.floor(total%86400/3600)).padStart(2,"0");
+ $("minutes").textContent=String(Math.floor(total%3600/60)).padStart(2,"0");
+ $("seconds").textContent=String(total%60).padStart(2,"0");
+
+ if(isClosed()){
+  $("deadlineNote").textContent="SANDIKLAR KAPANDI • SONUÇLAR GÖRÜNTÜLENEBİLİR";
+  $("heroLive").textContent="OY VERME SONA ERDİ";
+  $("voteBtn").disabled=true;
+  $("voteBtn").textContent="SANDIKLAR KAPANDI";
+ }else if(!existingVote&&!voting){
+  $("voteBtn").disabled=false;
+ }
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+/* ==================================================
+   DUYURU VE RAPORLAR
+================================================== */
+
+function renderAnnouncements(){
+ const list=$("announcementList");
+ list.replaceChildren();
+
+ const items=[
+  ...SECIM_AYARLARI.duyurular.map(x=>({...x,type:"DUYURU"})),
+  ...SECIM_AYARLARI.raporlar.map(x=>({...x,type:"RAPOR"}))
+ ].filter(x=>x.aktif!==false);
+
+ for(const item of items){
+  const card=document.createElement("div");
+  card.className="announcement";
+
+  const head=document.createElement("div");
+  head.className="announcement-head";
+
+  const badge=document.createElement("span");
+  badge.className="board-badge";
+  badge.textContent=item.type;
+
+  const title=document.createElement("strong");
+  title.textContent=item.baslik;
+
+  head.append(badge,title);
+
+  const body=document.createElement("div");
+  body.className="announcement-body";
+  body.textContent=item.metin;
+
+  const date=document.createElement("div");
+  date.className="announcement-date";
+  date.textContent=item.tarih;
+
+  body.append(date);
+  card.append(head,body);
+  list.append(card);
+ }
+}
+renderAnnouncements();
+
+/* ==================================================
+   KAYAN MESAJLAR
+================================================== */
+
+const tickerTrack=$("tickerTrack");
+
+[...SECIM_AYARLARI.mesajlar,
+ ...SECIM_AYARLARI.mesajlar].forEach(([name,message])=>{
+ const span=document.createElement("span");
+ const b=document.createElement("b");
+ b.textContent="◆ "+name+" • ";
+ span.append(b,document.createTextNode(message));
+ tickerTrack.append(span);
+});
+
+/* ==================================================
+   FOTOĞRAFLAR
+================================================== */
+
+function loadPhoto(img,key){
+ img.removeAttribute("src");
+ img.onerror=()=>img.removeAttribute("src");
+ if(FOTOGRAFLAR[key])img.src=FOTOGRAFLAR[key];
+}
+
+loadPhoto($("photoFatih"),"fatih");
+loadPhoto($("photoDursun"),"dursun");
+loadPhoto($("photoErden"),"erden");
+
+/* ==================================================
+   RÖPORTAJ YAYINI
+================================================== */
+
+let interviewIndex=0;
+let interviewTimer=null;
+
+function renderInterview(){
+ const item=SECIM_AYARLARI.roportajlar[interviewIndex];
+ if(!item)return;
+
+ const aday=ADAYLAR[item.aday];
+ if(!aday)return;
+
+ $("interviewName").textContent=aday.name.toLocaleUpperCase("tr-TR");
+ $("interviewPhotoName").textContent=aday.name.toLocaleUpperCase("tr-TR");
+ $("interviewInitials").textContent=aday.initials;
+ $("interviewQuestion").textContent=item.soru;
+ $("interviewAnswer").textContent=item.cevap;
+
+ $("interviewCounter").textContent=
+  String(interviewIndex+1).padStart(2,"0")+
+  " / "+
+  String(SECIM_AYARLARI.roportajlar.length).padStart(2,"0");
+
+ loadPhoto($("interviewImage"),item.aday);
+
+ const dots=$("interviewDots");
+ dots.replaceChildren();
+
+ SECIM_AYARLARI.roportajlar.forEach((_,i)=>{
+  const dot=document.createElement("span");
+  if(i===interviewIndex)dot.className="active";
+  dots.append(dot);
+ });
+
+ const progress=$("interviewProgress");
+ progress.classList.remove("play");
+ void progress.offsetWidth;
+ progress.classList.add("play");
+}
+
+function changeInterview(direction=1){
+ const count=SECIM_AYARLARI.roportajlar.length;
+ if(!count)return;
+ interviewIndex=(interviewIndex+direction+count)%count;
+ renderInterview();
+ clearInterval(interviewTimer);
+ interviewTimer=setInterval(()=>changeInterview(),9000);
+}
+
+$("prevInterview").onclick=()=>changeInterview(-1);
+$("nextInterview").onclick=()=>changeInterview(1);
+
+renderInterview();
+if(SECIM_AYARLARI.roportajlar.length){
+ interviewTimer=setInterval(()=>changeInterview(),9000);
+}
+
+/* ==================================================
+   MÜZİK ÇALAR
+================================================== */
+
+const audio=$("musicPlayer");
+let songIndex=0;
+let musicWanted=true;
+let musicErrors=0;
+
+audio.volume=.35;
+
+function musicLabel(){
+ $("musicBtn").textContent=
+  !SARKILAR.length?"♫ MÜZİK":
+  audio.paused?"♫ AÇ":"♫ DURDUR";
+}
+
+async function playMusic(){
+ if(!SARKILAR.length||!musicWanted)return;
+ if(!audio.getAttribute("src")){
+  audio.src=SARKILAR[songIndex];
+ }
+ try{
+  await audio.play();
+  musicErrors=0;
+ }catch(e){}
+ musicLabel();
+}
+
+function nextSong(){
+ if(!SARKILAR.length)return;
+ songIndex=(songIndex+1)%SARKILAR.length;
+ audio.src=SARKILAR[songIndex];
+ if(musicWanted)playMusic();
+}
+
+audio.onended=nextSong;
+audio.onerror=()=>{
+ musicErrors++;
+ if(musicErrors>=SARKILAR.length){
+  musicWanted=false;
+  audio.pause();
+  musicLabel();
+  return;
+ }
+ nextSong();
+};
+
+$("musicBtn").onclick=()=>{
+ if(!SARKILAR.length){
+  $("musicBtn").textContent="♫ LİNK EKLE";
+  return;
+ }
+ if(audio.paused){
+  musicWanted=true;
+  playMusic();
+ }else{
+  musicWanted=false;
+  audio.pause();
+  musicLabel();
+ }
+};
+
+document.addEventListener("pointerdown",()=>{
+ if(musicWanted&&SARKILAR.length&&audio.paused)playMusic();
+},{once:true});
+
+window.addEventListener("load",playMusic);
+musicLabel();
+
+/* ==================================================
+   İL VE ADAY SEÇİMİ
+================================================== */
+
+ILLER.forEach(il=>{
+ const option=document.createElement("option");
+ option.value=il;
+ option.textContent=il;
+ $("province").append(option);
+});
+
+$("province").onchange=()=>{
+ const il=$("province").value;
+ const box=$("provinceBox");
+
+ box.classList.remove("glow");
+ void box.offsetWidth;
+
+ if(ILLER.includes(il)){
+  box.classList.add("glow");
+  $("provinceHint").textContent=
+   "✓ "+il+" seçildi. Şimdi adayınızı mühürleyin.";
+
+  $("step1").className="step done";
+  $("step2").className=selectedCandidate?"step done":"step active";
+  $("step3").className=selectedCandidate?"step active":"step";
+ }else{
+  $("provinceHint").textContent="Önce ilinizi seçin.";
+  $("step1").className="step active";
+  $("step2").className="step";
+  $("step3").className="step";
+ }
+};
+
+function chooseCandidate(card){
+ if(voting||existingVote||isClosed())return;
+
+ document.querySelectorAll(".candidate").forEach(c=>{
+  c.classList.remove("selected");
+ });
+
+ selectedCandidate=card.dataset.id;
+
+ void card.offsetWidth;
+ card.classList.add("selected");
+
+ if(ILLER.includes($("province").value)){
+  $("step2").className="step done";
+  $("step3").className="step active";
+ }
+}
+
+document.querySelectorAll(".candidate").forEach(card=>{
+ card.onclick=()=>chooseCandidate(card);
+ card.onkeydown=e=>{
+  if(e.key==="Enter"||e.key===" "){
+   e.preventDefault();
+   chooseCandidate(card);
+  }
+ };
+});
+
+/* ==================================================
+   SAYFA GEÇİŞLERİ
+================================================== */
+
+function goVote(){
+ show("votePanel");
+ hide("resultsPanel");
+ $("votePanel").scrollIntoView({behavior:"smooth"});
+}
+
+function goResults(){
+ hide("votePanel");
+ show("resultsPanel");
+ $("resultsPanel").scrollIntoView({behavior:"smooth"});
+ loadResults();
+}
+
+$("heroVote").onclick=goVote;
+$("heroResults").onclick=goResults;
+$("headerResults").onclick=goResults;
+$("resultsBtn").onclick=goResults;
+$("backBtn").onclick=goVote;
+$("refreshBtn").onclick=loadResults;
+
+$("successResults").onclick=()=>{
+ hide("successOverlay");
+ goResults();
+};
+
+$("successClose").onclick=()=>{
+ hide("successOverlay");
+ goResults();
+};
+
+/* ==================================================
+   FIREBASE OTURUMU
+================================================== */
+
+function markVoted(n){
+ existingVote=n;
+ $("voteBtn").disabled=true;
+ $("voteBtn").textContent="OYUNUZ KAYITLI";
+ status("Katılım numaranız: "+numberFormat(n));
+}
+
+onAuthStateChanged(auth,async current=>{
+ if(!current){
+  try{
+   await signInAnonymously(auth);
+  }catch(e){
+   status("Firebase giriş hatası: "+e.message);
+  }
+  return;
+ }
+
+ user=current;
+
+ try{
+  const snap=await getDoc(doc(db,"votes",user.uid));
+
+  if(snap.exists()){
+   markVoted(snap.data().number);
+  }else{
+   status(isClosed()?
+    "Sandıklar kapanmıştır.":
+    "Oy kullanmak için il ve aday seçin.");
+  }
+ }catch(e){
+  status("Oy durumu kontrol edilemedi: "+e.message);
+ }
+});
+
+/* ==================================================
+   OY SANDIĞI ANİMASYONU
+================================================== */
+
+async function animateVote(candidate){
+ const scene=$("scene");
+ scene.className="scene";
+
+ $("sceneEnvelope").style.background=ADAYLAR[candidate].color;
+ $("stageTitle").textContent="OY PUSULASI HAZIR";
+ $("stageText").textContent="Mühür hazırlanıyor...";
+
+ show("voteOverlay");
+
+ await sleep(200);
+
+ scene.classList.add("phase-stamp");
+ $("stageTitle").textContent="EVET MÜHRÜ BASILIYOR";
+ $("stageText").textContent="Tercihiniz mühürleniyor...";
+
+ await sleep(1100);
+
+ scene.classList.add("phase-fold");
+ $("stageTitle").textContent="OY PUSULASI KATLANIYOR";
+ $("stageText").textContent="Zarf hazırlanıyor...";
+
+ await sleep(1100);
+
+ scene.classList.add("phase-drop");
+ $("stageTitle").textContent="ZARF SANDIĞA ATILIYOR";
+ $("stageText").textContent="Oyunuz sandığa gönderiliyor...";
+
+ await sleep(2300);
+
+ $("stageTitle").textContent="OY KAYDI DOĞRULANIYOR";
+ $("stageText").textContent="Lütfen bekleyin...";
+}
+
+/* ==================================================
+   FIREBASE OY KAYDI
+================================================== */
+
+$("voteBtn").onclick=async()=>{
+ if(voting||existingVote)return;
+
+ if(isClosed()){
+  status("Oy verme süresi sona erdi.");
+  updateCountdown();
+  return;
+ }
+
+ const province=$("province").value;
+ const candidate=selectedCandidate;
+
+ if(!ILLER.includes(province)){
+  status("Lütfen ilinizi seçin.");
+  return;
+ }
+
+ if(!ADAYLAR[candidate]){
+  status("Lütfen bir aday seçin.");
+  return;
+ }
+
+ if(!user){
+  status("Firebase bağlantısı bekleniyor.");
+  return;
+ }
+
+ voting=true;
+ $("voteBtn").disabled=true;
+
+ const animation=animateVote(candidate);
+
+ try{
+  const voteRef=doc(db,"votes",user.uid);
+  const counterRef=doc(db,"system","counter");
+
+  const number=await runTransaction(db,async tx=>{
+   const oldVote=await tx.get(voteRef);
+   const counter=await tx.get(counterRef);
+
+   if(oldVote.exists()){
+    throw new Error("Bu hesapla daha önce oy kullanılmış.");
+   }
+
+   const next=(counter.exists()?counter.data().count:0)+1;
+
+   tx.set(counterRef,{
+    count:next,
+    lastUid:user.uid,
+    updatedAt:serverTimestamp()
+   });
+
+   tx.set(voteRef,{
+    candidate,
+    province,
+    number:next,
+    createdAt:serverTimestamp()
+   });
+
+   return next;
+  });
+
+  await animation;
+
+  hide("voteOverlay");
+  markVoted(number);
+
+  ["step1","step2","step3"].forEach(id=>{
+   $(id).className="step done";
+  });
+
+  $("memberNumber").textContent=numberFormat(number);
+  show("successOverlay");
+
+ }catch(e){
+  hide("voteOverlay");
+  status("Oy kaydedilemedi: "+e.message);
+
+  try{
+   const snap=await getDoc(doc(db,"votes",user.uid));
+
+   if(snap.exists()){
+    markVoted(snap.data().number);
+   }else{
+    $("voteBtn").disabled=isClosed();
+   }
+  }catch{
+   $("voteBtn").disabled=isClosed();
+  }
+ }finally{
+  voting=false;
+ }
+};
+
+/* ==================================================
+   SONUÇLAR
+================================================== */
+
+function emptyResults(){
+ const provinces={};
+
+ ILLER.forEach(il=>{
+  provinces[il]={fatih:0,dursun:0,erden:0};
+ });
+
+ return {
+  total:0,
+  counts:{fatih:0,dursun:0,erden:0},
+  provinces
+ };
+}
+
+async function loadResults(){
+ $("totalVotes").textContent="...";
+
+ try{
+  const snap=await getDocs(collection(db,"votes"));
+  const data=emptyResults();
+
+  snap.forEach(item=>{
+   const v=item.data();
+
+   if(!ADAYLAR[v.candidate]||
+      !ILLER.includes(v.province))return;
+
+   data.total++;
+   data.counts[v.candidate]++;
+   data.provinces[v.province][v.candidate]++;
+  });
+
+  results=data;
+  renderResults();
+
+ }catch(e){
+  $("totalVotes").textContent="Hata";
+  $("resultBars").textContent=
+   "Sonuçlar alınamadı: "+e.message;
+ }
+}
+
+function winner(il){
+ if(!results)return "empty";
+
+ const votes=results.provinces[il];
+ if(!votes)return "empty";
+
+ const max=Math.max(...Object.values(votes));
+ if(max===0)return "empty";
+
+ const top=Object.keys(votes).filter(k=>votes[k]===max);
+ return top.length===1?top[0]:"tie";
+}
+
+function provinceColor(il){
+ const w=winner(il);
+ return w==="empty"?"#62616a":
+        w==="tie"?"#9b58c9":
+        ADAYLAR[w].color;
+}
+
+function leaderCounts(){
+ const counts={fatih:0,dursun:0,erden:0};
+
+ ILLER.forEach(il=>{
+  const w=winner(il);
+  if(counts[w]!==undefined)counts[w]++;
+ });
+
+ return counts;
+}
+
+function provinceTotal(il){
+ return Object.values(results.provinces[il])
+  .reduce((a,b)=>a+b,0);
+}
+
+function renderResults(){
+ const total=results.total;
+ const ranked=Object.keys(ADAYLAR)
+  .sort((a,b)=>results.counts[b]-results.counts[a]);
+
+ const first=ranked[0];
+ const second=ranked[1];
+
+ const tied=total>0&&
+  results.counts[first]===results.counts[second];
+
+ const activeCities=ILLER.filter(il=>provinceTotal(il)>0);
+
+ $("totalVotes").textContent=total.toLocaleString("tr-TR");
+ $("openedCities").textContent=
+  activeCities.length+" / 81 İLDE OY KULLANILDI";
+
+ $("statLeader").textContent=
+  !total?"—":
+  tied?"EŞİT":
+  ADAYLAR[first].name.split(" ")[0].toUpperCase("tr-TR");
+
+ $("statCities").textContent=activeCities.length;
+
+ $("statMargin").textContent=
+  !total?"0":
+  (results.counts[first]-results.counts[second])
+   .toLocaleString("tr-TR");
+
+ renderBars(ranked);
+ renderRunoff(ranked);
+ renderInsights();
+ renderLeaders();
+ renderMap();
+}
+
+function renderBars(ranked){
+ const bars=$("resultBars");
+ bars.replaceChildren();
+
+ ranked.forEach((key,index)=>{
+  const aday=ADAYLAR[key];
+  const count=results.counts[key];
+
+  const row=document.createElement("div");
+  row.className="result-row";
+
+  const top=document.createElement("div");
+  top.className="result-top";
+
+  const photo=document.createElement("div");
+  photo.className="result-photo";
+
+  const initials=document.createElement("div");
+  initials.className="result-initials";
+  initials.textContent=aday.initials;
+
+  const img=document.createElement("img");
+  loadPhoto(img,key);
+  photo.append(initials,img);
+
+  const info=document.createElement("div");
+  info.className="result-info";
+
+  const name=document.createElement("div");
+  name.className="result-name";
+  name.textContent=aday.name;
+
+  if(index===0&&results.total>0&&
+     results.counts[key]>results.counts[ranked[1]]){
+   const badge=document.createElement("span");
+   badge.className="leader-badge";
+   badge.textContent="ÖNDE";
+   name.append(badge);
+  }
+
+  const meta=document.createElement("div");
+  meta.className="result-meta";
+  meta.textContent=
+   count.toLocaleString("tr-TR")+" oy • "+
+   leaderCounts()[key]+" ilde önde";
+
+  info.append(name,meta);
+
+  const percent=document.createElement("div");
+  percent.className="result-pct";
+  percent.textContent="%"+pct(count,results.total);
+
+  top.append(photo,info,percent);
+
+  const track=document.createElement("div");
+  track.className="track";
+
+  const fill=document.createElement("div");
+  fill.className="fill";
+  fill.style.background=aday.color;
+  track.append(fill);
+
+  row.append(top,track);
+  bars.append(row);
+
+  requestAnimationFrame(()=>{
+   fill.style.width=pct(count,results.total)+"%";
+  });
+ });
+}
+
+function renderRunoff(ranked){
+ const box=$("runoffBox");
+ const first=ranked[0],second=ranked[1];
+
+ if(!results.total){
+  box.textContent="Henüz oy kullanılmadı. Sonuçlar oy geldikçe görüntülenecek.";
+  return;
+ }
+
+ const leaderPct=results.counts[first]/results.total*100;
+
+ if(leaderPct>50){
+  box.textContent=
+   ADAYLAR[first].name+
+   " oyların %50'sinden fazlasını alarak mevcut sıralamada önde bulunuyor.";
+ }else{
+  box.replaceChildren();
+  const text=document.createTextNode(
+   "Varsayımsal iki turlu seçim modelinde ilk iki aday: "
+  );
+  const names=document.createElement("b");
+  names.textContent=
+   ADAYLAR[first].name+" ve "+ADAYLAR[second].name;
+  box.append(text,names);
+ }
+
+ const note=document.createElement("div");
+ note.className="disclaimer";
+ note.style.marginTop="9px";
+ note.textContent=
+  "İkinci tur değerlendirmesi yalnızca taraftar anketine ait varsayımsal bir senaryodur.";
+ box.append(note);
+}
+
+function renderInsights(){
+ const leaders=leaderCounts();
+
+ const leaderKey=Object.keys(leaders)
+  .sort((a,b)=>leaders[b]-leaders[a])[0];
+
+ const cityOrder=ILLER
+  .filter(il=>provinceTotal(il)>0)
+  .sort((a,b)=>provinceTotal(b)-provinceTotal(a));
+
+ const busiest=cityOrder[0];
+
+ const competitive=cityOrder
+  .map(il=>{
+   const values=Object.values(results.provinces[il])
+    .sort((a,b)=>b-a);
+   return {
+    il,
+    margin:values[0]-values[1],
+    total:provinceTotal(il)
+   };
+  })
+  .sort((a,b)=>a.margin-b.margin||b.total-a.total)[0];
+
+ const cards=[
+  {
+   label:"İL HARİTASININ HÂKİMİ",
+   value:results.total?ADAYLAR[leaderKey].name:"—",
+   detail:results.total?leaders[leaderKey]+" ilde birinci":"Henüz veri yok"
+  },
+  {
+   label:"EN ÇOK OY ÇIKAN İL",
+   value:busiest||"—",
+   detail:busiest?provinceTotal(busiest)+" oy":"Henüz veri yok"
+  },
+  {
+   label:"EN ÇEKİŞMELİ İL",
+   value:competitive?.il||"—",
+   detail:competitive?
+    "İlk iki aday arasında "+competitive.margin+" oy farkı":
+    "Henüz veri yok"
+  },
+  {
+   label:"HENÜZ OY GELMEYEN İL",
+   value:String(81-cityOrder.length),
+   detail:"81 il üzerinden hesaplandı"
+  }
+ ];
+
+ const container=$("insights");
+ container.replaceChildren();
+
+ cards.forEach(item=>{
+  const card=document.createElement("div");
+  card.className="insight";
+
+  const label=document.createElement("small");
+  label.textContent=item.label;
+
+  const value=document.createElement("strong");
+  value.textContent=item.value;
+
+  const detail=document.createElement("p");
+  detail.textContent=item.detail;
+
+  card.append(label,value,detail);
+  container.append(card);
+ });
+}
+
+function renderLeaders(){
+ const container=$("leaderCards");
+ container.replaceChildren();
+
+ for(const [key,aday] of Object.entries(ADAYLAR)){
+  const cities=ILLER
+   .filter(il=>winner(il)===key)
+   .sort((a,b)=>
+    results.provinces[b][key]-results.provinces[a][key]
+   );
+
+  const card=document.createElement("div");
+  card.className="leader";
+  card.style.borderTop="3px solid "+aday.color;
+
+  const count=document.createElement("div");
+  count.className="count";
+  count.style.color=aday.color;
+  count.textContent=cities.length;
+
+  const name=document.createElement("div");
+  name.className="name";
+  name.textContent=aday.name;
+
+  const list=document.createElement("div");
+  list.className="cities";
+  list.textContent=cities.length?
+   cities.slice(0,5).join(" • ")+
+   (cities.length>5?" +"+(cities.length-5)+" il":""):
+   "Henüz önde olduğu il yok";
+
+  card.append(count,name,list);
+  container.append(card);
+ }
+}
+
+function provinceDetail(il){
+ const votes=results?.provinces[il];
+ if(!votes)return;
+
+ const total=provinceTotal(il);
+ const box=$("provinceDetail");
+ box.replaceChildren();
+
+ const title=document.createElement("strong");
+ title.textContent=
+  il.toLocaleUpperCase("tr-TR")+" • "+total+" OY";
+
+ box.append(title,document.createElement("hr"));
+
+ for(const [key,aday] of Object.entries(ADAYLAR)){
+  const line=document.createElement("div");
+  line.textContent=
+   aday.name+": "+votes[key]+
+   " oy (%"+pct(votes[key],total)+")";
+  box.append(line);
+ }
+
+ const w=winner(il);
+ const last=document.createElement("strong");
+ last.textContent=
+  w==="empty"?"Henüz oy yok.":
+  w==="tie"?"İlde eşitlik var.":
+  "Önde: "+ADAYLAR[w].name;
+
+ box.append(document.createElement("hr"),last);
+}
+
+/* ==================================================
+   TÜRKİYE HARİTASI
+================================================== */
+
+/*
+  Harita için turkey-provinces.geojson dosyasını
+  index.html ile aynı klasöre koyabilirsin.
+*/
+
+const MAP_URLS=[
+ "./turkey-provinces.geojson",
+ "https://cdn.jsdelivr.net/gh/theaiagent/turkiye_iller_geojson@main/turkiye_iller.geojson"
+];
+
+function norm(v){
+ return String(v??"").toLocaleLowerCase("tr-TR")
+  .replace(/ı/g,"i")
+  .replace(/ğ/g,"g")
+  .replace(/ü/g,"u")
+  .replace(/ş/g,"s")
+  .replace(/ö/g,"o")
+  .replace(/ç/g,"c")
+  .replace(/[^a-z]/g,"");
+}
+
+function featureName(p){
+ const options=[
+  p.name,p.NAME,p.Name,p.il,p.IL,
+  p.il_adi,p.IL_ADI,p.city,p.City,
+  p.province,p.Province,p.ad,p.AD
+ ];
+
+ for(const value of options){
+  const il=ILLER.find(name=>norm(name)===norm(value));
+  if(il)return il;
+ }
+
+ return null;
+}
+
+function coords(g){
+ if(!g)return [];
+ if(g.type==="Polygon")return g.coordinates.flat();
+ if(g.type==="MultiPolygon")return g.coordinates.flat(2);
+ return [];
+}
+
+function ringPath(ring,project){
+ return ring.map((p,i)=>{
+  const [x,y]=project(p);
+  return (i?"L":"M")+
+   x.toFixed(2)+","+y.toFixed(2);
+ }).join(" ")+" Z";
+}
+
+function geometryPath(g,project){
+ if(g.type==="Polygon"){
+  return g.coordinates.map(r=>ringPath(r,project)).join(" ");
+ }
+ if(g.type==="MultiPolygon"){
+  return g.coordinates.flatMap(p=>
+   p.map(r=>ringPath(r,project))
+  ).join(" ");
+ }
+ return "";
+}
+
+async function loadMap(){
+ for(const url of MAP_URLS){
+  try{
+   const response=await fetch(url);
+   if(!response.ok)continue;
+
+   const data=await response.json();
+
+   if(data.type!=="FeatureCollection"||
+      !Array.isArray(data.features))continue;
+
+   const recognized=data.features.filter(f=>
+    featureName(f.properties||{})
+   );
+
+   const unique=new Set(
+    recognized.map(f=>featureName(f.properties||{}))
+   );
+
+   if(unique.size<70)continue;
+
+   mapFeatures=recognized;
+   renderMap();
+   return;
+
+  }catch(e){
+   console.warn("Harita yükleme hatası:",e);
+  }
+ }
+
+ $("map").textContent=
+  "Harita yüklenemedi. turkey-provinces.geojson dosyasını kontrol edin.";
+}
+
+function renderMap(){
+ if(!mapFeatures||!results)return;
+
+ const points=mapFeatures
+  .flatMap(f=>coords(f.geometry))
+  .filter(p=>
+   Array.isArray(p)&&
+   Number.isFinite(p[0])&&
+   Number.isFinite(p[1])
+  );
+
+ if(!points.length)return;
+
+ const xs=points.map(p=>p[0]);
+ const ys=points.map(p=>p[1]);
+
+ const minX=Math.min(...xs),maxX=Math.max(...xs);
+ const minY=Math.min(...ys),maxY=Math.max(...ys);
+
+ const width=1000,pad=15;
+ const scale=Math.min(
+  (width-pad*2)/(maxX-minX),
+  620/(maxY-minY)
+ );
+
+ const height=(maxY-minY)*scale+pad*2;
+
+ const project=p=>[
+  (p[0]-minX)*scale+pad,
+  (maxY-p[1])*scale+pad
+ ];
+
+ const NS="http://www.w3.org/2000/svg";
+ const svg=document.createElementNS(NS,"svg");
+
+ svg.setAttribute("viewBox",`0 0 ${width} ${height}`);
+ svg.setAttribute("aria-label","Türkiye seçim haritası");
+
+ for(const feature of mapFeatures){
+  const il=featureName(feature.properties||{});
+  if(!il)continue;
+
+  const path=document.createElementNS(NS,"path");
+
+  path.setAttribute(
+   "d",geometryPath(feature.geometry,project)
+  );
+  path.setAttribute("fill",provinceColor(il));
+  path.setAttribute("fill-rule","evenodd");
+
+  const title=document.createElementNS(NS,"title");
+  title.textContent=il;
+  path.append(title);
+
+  path.onclick=()=>provinceDetail(il);
+  svg.append(path);
+ }
+
+ $("map").replaceChildren(svg);
+}
+loadMap();
+
+/* ==================================================
+   VIP PNG PAYLAŞIM KARTI
+================================================== */
+
+function makeShareCanvas(){
+ const c=document.createElement("canvas");
+ c.width=1080;
+ c.height=1350;
+
+ const ctx=c.getContext("2d");
+ const g=ctx.createLinearGradient(0,0,1080,1350);
+
+ g.addColorStop(0,"#4c152b");
+ g.addColorStop(.5,"#13070e");
+ g.addColorStop(1,"#321020");
+
+ ctx.fillStyle=g;
+ ctx.fillRect(0,0,1080,1350);
+
+ ctx.fillStyle="#e31c42";
+ ctx.fillRect(0,0,540,13);
+ ctx.fillStyle="#ffd64b";
+ ctx.fillRect(540,0,540,13);
+
+ ctx.strokeStyle="#d9ac49";
+ ctx.lineWidth=3;
+ ctx.strokeRect(35,35,1010,1280);
+
+ ctx.textAlign="center";
+ ctx.fillStyle="#ffd64b";
+ ctx.font="900 36px Montserrat,Arial";
+ ctx.fillText("GALATASARAY",540,115);
+
+ ctx.font="900 56px Rajdhani,Arial";
+ ctx.fillText("BAŞKANLIK SEÇİMİ 2026",540,178);
+
+ ctx.fillStyle="#c8aab7";
+ ctx.font="600 22px Montserrat,Arial";
+ ctx.fillText("BAĞIMSIZ TARAFTAR ANKETİ",540,220);
+
+ ctx.fillStyle="#24111c";
+ ctx.fillRect(95,265,890,175);
+
+ ctx.strokeStyle="#ffd64b66";
+ ctx.strokeRect(95,265,890,175);
+
+ ctx.fillStyle="#fff0c7";
+ ctx.font="700 24px Montserrat,Arial";
+ ctx.fillText("TOPLAM KULLANILAN OY",540,315);
+
+ ctx.fillStyle="#ffd64b";
+ ctx.font="900 90px Rajdhani,Arial";
+ ctx.fillText(
+  results.total.toLocaleString("tr-TR"),540,408
+ );
+
+ const leaders=leaderCounts();
+ const order=Object.keys(ADAYLAR)
+  .sort((a,b)=>results.counts[b]-results.counts[a]);
+
+ order.forEach((key,i)=>{
+  const aday=ADAYLAR[key];
+  const y=480+i*183;
+
+  ctx.fillStyle="#24121e";
+  ctx.fillRect(85,y,910,155);
+
+  ctx.fillStyle=aday.color;
+  ctx.fillRect(85,y,10,155);
+
+  ctx.textAlign="left";
+  ctx.fillStyle="#ffffff";
+  ctx.font="800 29px Montserrat,Arial";
+  ctx.fillText(
+   aday.name.toLocaleUpperCase("tr-TR"),120,y+45
+  );
+
+  ctx.textAlign="right";
+  ctx.fillStyle=aday.color;
+  ctx.font="900 33px Rajdhani,Arial";
+  ctx.fillText(
+   "%"+pct(results.counts[key],results.total),
+   955,y+46
+  );
+
+  ctx.textAlign="left";
+  ctx.fillStyle="#d8c0c8";
+  ctx.font="600 20px Montserrat,Arial";
+  ctx.fillText(
+   results.counts[key]+" OY • "+
+   leaders[key]+" İLDE ÖNDE",
+   120,y+82
+  );
+
+  ctx.fillStyle="#44303a";
+  ctx.fillRect(120,y+105,835,17);
+
+  ctx.fillStyle=aday.color;
+  ctx.fillRect(
+   120,y+105,
+   835*results.counts[key]/Math.max(results.total,1),
+   17
+  );
+ });
+
+ ctx.textAlign="center";
+ ctx.fillStyle="#cbb1be";
+ ctx.font="700 22px Montserrat,Arial";
+ ctx.fillText("TARAFTAR KATILIM NUMARASI",540,1090);
+
+ ctx.fillStyle="#ffd64b";
+ ctx.font="900 58px Rajdhani,Arial";
+ ctx.fillText(
+  existingVote?
+   numberFormat(existingVote):
+   "OY KULLANILMADI",
+  540,1150
+ );
+
+ ctx.fillStyle="#a98e9c";
+ ctx.font="500 19px Montserrat,Arial";
+ ctx.fillText(
+  "Galatasaray Spor Kulübünün resmî seçimi değildir.",
+  540,1235
+ );
+ ctx.fillText(
+  "Sonuçlar görselin oluşturulduğu ana aittir.",
+  540,1270
+ );
+
+ return c;
+}
+
+$("shareBtn").onclick=async()=>{
+ if(!results)return;
+
+ const canvas=makeShareCanvas();
+
+ if(shareUrl)URL.revokeObjectURL(shareUrl);
+
+ shareBlob=await new Promise(resolve=>
+  canvas.toBlob(resolve,"image/png")
+ );
+
+ if(!shareBlob){
+  $("shareStatus").textContent="Görsel oluşturulamadı.";
+  return;
+ }
+
+ shareUrl=URL.createObjectURL(shareBlob);
+ $("sharePreview").src=shareUrl;
+ $("shareStatus").textContent="";
+ show("shareOverlay");
+};
+
+$("shareImageBtn").onclick=async()=>{
+ if(!shareBlob)return;
+
+ const file=new File(
+  [shareBlob],
+  "galatasaray-secim-2026.png",
+  {type:"image/png"}
+ );
+
+ try{
+  if(navigator.share&&
+     navigator.canShare?.({files:[file]})){
+   await navigator.share({
+    files:[file],
+    title:"Galatasaray Başkanlık Seçimi 2026",
+    text:"Bağımsız taraftar anketi\n"+location.href
+   });
+  }else{
+   $("shareStatus").textContent=
+    "Doğrudan paylaşım desteklenmiyor. PNG KAYDET seçeneğini kullanın.";
+  }
+ }catch(e){
+  if(e.name!=="AbortError"){
+   $("shareStatus").textContent="Paylaşım açılamadı.";
+  }
+ }
+};
+
+$("downloadImageBtn").onclick=()=>{
+ if(!shareUrl)return;
+
+ const a=document.createElement("a");
+ a.href=shareUrl;
+ a.download="galatasaray-secim-2026.png";
+ document.body.append(a);
+ a.click();
+ a.remove();
+};
+
+$("closeShareBtn").onclick=()=>hide("shareOverlay");
+
+</script>
+</body>
+</html>
